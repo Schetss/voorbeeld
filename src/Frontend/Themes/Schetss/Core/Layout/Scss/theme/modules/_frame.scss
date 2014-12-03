@@ -24,8 +24,6 @@
 //
 
 .header-holder {
-	//background-color: $beta-text-color;
-	//@include background-opacity($beta-text-color, 0.9);
 	@include mq($bp3) {
 		@include padding-top(0);
 	}
@@ -44,14 +42,31 @@
 
 }
 
-
 .header {
-	@include padding-tb(0.6,0.6);
-	position: relative;
+	border-bottom: 1px solid $alpha-text-color;
 
-	@include mq($bp3) {
-		@include box-(12,1,1);
+	// @include padding-tb(0.6,0.6);
+	// position: relative;
+
+	// @include mq($bp3) {
+	// 	@include box-(12,1,1);
+	// }
+}
+
+.header-left {
+	width: 250px;
+	float: left;
+
+	.logo {
+		//@include px-margin-lr(2,0);
+		width: 244px;
+		height: 45px;
 	}
+}
+
+.header-right {
+	width: 140px;
+	float: right;
 }
 
 	.header .inner {
@@ -71,118 +86,17 @@
 		}
 	}
 
-.logo {
-	@include px-margin-lr(2,0);
-	width: 120px;
-	height: 39px;
-}
-
-
-
-//
-// header image
-//
-
-.main-header-image {
-	max-width: none;
-	width: 100%;
-	position: fixed;
-	overflow: hidden;
-	height: 600px;
-	padding: 0;
-	margin-top:-2em;
-	z-index: -1;
-	p {
-		img {
-			width: 280%;
-			max-width: none;
-			margin-left: -90%;
-		}
-	}
-
-	@include mq($bp3) {
-		margin-top: -3em;
-		p {
-			img {
-				width: 200%;
-				margin-left: -50%;
-			}
-		}
-	}
-
-	@include mq($bp4) {
-		margin-top:-5em;
-		p {
-			img {
-				width: 100%;
-				margin-left: 0;
-			}
-		}
-	}
-}
-
-.image-overlay {
-	@include gradient-linear-transparant(black, 20%);
-	opacity: 0.4;
-	height: 600px;
-	position: absolute;
-	z-index: 9999;
-	width: 100%;
-	display: block;
-}
-
-
-
-//
-// header background
-//
-
-.header-row {
-	top: 0;
-}
-
-
-.header-left {
-	float: left;
-	position: absolute; 
-	opacity: 0.8;
-	border-top: 4.4em solid $alpha-ui-color;
-	border-right: 50px solid transparent;
-	height: 0;
-	width: 65%;
-
-	@include mq($bp3) {
-		width: 30%;
-		
-	}
-
-
-}
-
-.header-right {
- 	position: absolute;
- 	right: 0;  
-	opacity: 0.8;
-	border-bottom: 4.4em solid $gamma-ui-color;
-	border-left: 50px solid transparent;
-	height: 0;
-	width: 40%;
-
-	@include mq($bp3) {
-		width: 70%;
-	}
-}
 
 
 
 
-//
+
 // main
 //
 
 .main {
 	border-top: 1px solid $alpha-ui-color;
-	background-color: $beta-text-color;
+	// background-color: $beta-text-color;
 }
 
 .main-holder {

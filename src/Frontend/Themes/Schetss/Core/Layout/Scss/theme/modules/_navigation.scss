@@ -1,12 +1,8 @@
-//
 // Navigation
-//
 
 .main-nav {
 	float: left;
 	width: 100%;
-	font-size: 1.2em;
-	padding-top: -1em;
 
 	ul {
 		@extend %clearfix;
@@ -15,16 +11,15 @@
 		@include text-dimensions($alpha-font-size,1,1);
 	}
 
+
 	a {
-		margin-left: 0.3em;
-		color: $epsilon-ui-color;
+		color: $alpha-ui-color;
 		text-decoration: none;
 		font-weight: $beta-font-weight;
 	}
 
-	a:hover,
-	.selected a {
-		color: darken($alpha-ui-color,0);
+	a:hover {
+		color: lighten($alpha-ui-color,10);
 	}
 }
 
@@ -34,8 +29,8 @@
 
 .main-nav,
 .mobile-nav .main-nav {
-	margin-top: 0.85em;
-	width: 100%;
+
+	margin-top: 0.8em;
 
 	ul {
 		padding-bottom: 0;
@@ -43,8 +38,7 @@
 	}
 
 	li {
-		@include background-opacity($beta-text-color, 0.9);
-		//border-top: 1px solid $gamma-ui-color;
+		border-top: 1px solid $gamma-ui-color;
 		//@include padding-tb(0.4,0.4);
 	}
 
@@ -56,49 +50,147 @@
 	}
 
 	.selected {
-			@include background-opacity($gamma-ui-color, 0.8);
+		background-color: $alpha-ui-color;
 		a {
 		color: $beta-text-color;
 		}
+
+		
 	}
+
+
+	li:last-child {
+		a, a:hover, a:visited, a:active {
+			@include padding-tb(0.4,0);
+			//color: darken($alpha-ui-color,12);
+		}
+	}
+
 
 
 
 
 	@include mq($bp3) {
 		display: block !important;
-		margin-top: 0.4em;
-		width: auto;
-		float: right;
+		width: 100%;
+		float: left;
+		font-size: 1.05em;
+		margin-top: 0;
 
 		ul {
+			width: 100%;
+			float: left;
 			@include horizontal-nav();
 			@include text-dimensions(14,1,0);
 		}
 
-		li, li.selected {
-			background-color: transparent;
-			@include px-margin-lr(2,0);
+		li {
+			border: 0;
+			// @include px-margin-lr(1,0);
+			//@include padding-tb(0.4, 0.4);
+			margin-right: 2em;
+		}
+
+		ul li:last-child {
+    		float: right;
+    		margin-right: 0em !important;
+
+		}
+
+		.main-nav-extra {
+			float: right;
+			li {
+				margin-right: 0em !important;
+			}
 		}
 
 
-		a:hover,
-		{
-			color: lighten($alpha-text-color,20);
+		li:last-child a {
+			@include padding-tb(0.4,0.4);
 		}
+
+		a {
+			@include px-padding-lr(0,0);
+		}
+
+		.selected {
+			background: none;
+			a {
+			color: $alpha-ui-color;
+			}
+		}
+
+
+	}
+
+}
+
+//
+// sub navigation
+//
+
+.main-nav-sub {
+
+	@include mq($bp3) {
+		display: none;
+	}
+
+	ul {
+		li {
+			background-color: $beta-text-color;
+			a {
+
+			}
+			a, a:hover, a:visited, a:active {
+				@include padding-tb(0.3,0.3);
+				color: $alpha-ui-color !important;
+				@include px-padding-lr(3,0);
+				font-size: 0.9em;
+			}
+		}
+
+		li:last-child {
+			a, a:hover, a:visited, a:active {
+				@include padding-tb(0.3,0.3);
+			}
+		}
+
+		.selected {
+			background-color: $alpha-ui-color;
+			a, a:hover, a:visited, a:active {
+				color: $beta-text-color !important;
+			}
+		}
+
+		
+	}
+}
+
+
+
+
+.header-nav {
+	@include padding-tb(0.5,0.5);
+
+	@include mq($bp3) {
+		@include padding-tb(0,0);
 	}
 }
 
 .main-nav-trigger {
-	position: absolute;
 	cursor: pointer;
-	display: block;
-	right: 0;
-	width: 4em;
-	height: 4em;
-	z-index: 999;
-	@include svg-bg("../Img/icon-menu", ".png", transparent, 10%, no-repeat, 2em);
-
+	//dihttp://vrdfork:8888/nlsplay: block;
+	color: $beta-ui-color;
+	float: right;
+	//width: 2.1em;
+	//height: 2.1em;
+	//text-indent: -9999px;
+	//@include text-dimensions($alpha-font-size,1,1);
+	@include svg-bg("../img/icon-menu", ".png", 100%, no-repeat);
+	font-size: 1.2em;
+	font-weight: bold;
+	@include px-margin-lr(0,1);
+	@include px-padding-lr(0,4.5);
 
 	@include mq($bp3) {
 		display: none;
@@ -109,3 +201,53 @@
 .trigger-active {
 	//background-color: $alpha-link-color;
 }
+
+
+
+// language Navigation
+
+.lan-nav {
+	position: absolute;
+	right: 0;
+	@include px-padding-lr(0,1);
+
+	@include mq($bp3) {
+		@include px-padding-lr(0,0);
+		position: relative;
+	}
+
+	ul {
+		float: right;
+		@include horizontal-nav();
+		@include text-dimensions(14,1,0);
+	}
+
+	a {
+		color: $beta-text-color;
+		text-decoration: none;
+		font-weight: $beta-font-weight;
+		font-size: 0.8em;
+		
+		background-color: $alpha-ui-color;
+		margin-left: 1em;
+		@include padding-tb(0.04,0.04);
+		padding-left: 0.35em;
+		padding-right: 0.35em;
+		border-radius: 3px;
+		border: 1px solid $alpha-ui-color;
+
+		@include mq($bp3) {
+			margin-left: 0.9em;
+		}
+	}
+
+	.selected a{
+		color: $alpha-ui-color;
+		background-color: $beta-text-color;
+	}
+
+}
+
+
+
+
