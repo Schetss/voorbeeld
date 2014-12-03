@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<name>Schetss</name>
+	<version>0.1.0</version>
+	<requirements>
+		<minimum_version>3.0.0</minimum_version>
+	</requirements>
+	<thumbnail>thumbnail.png</thumbnail>
+	<description>
+		<![CDATA[
+			Schetss is a basic template
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name>Schetss</name>
+			<url>http://Schetss.be</url>
+		</author>
+	</authors>
+	<metanavigation supported="false" />
+	<templates>
+		<template label="Default" path="Core/Layout/Templates/Default.tpl">
+			<positions>
+				<position name="main" />
+			</positions>
+			<format>
+				[main]
+			</format>
+		</template>
+	</templates>
+</theme>
