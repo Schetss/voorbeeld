@@ -13,15 +13,25 @@
 
 
 	a {
-		color: $alpha-ui-color;
+		color: $alpha-text-color;
 		text-decoration: none;
 		font-weight: $beta-font-weight;
 	}
 
+	.selected {
+		// color: $alpha-ui-color;
+		a {
+			color: $alpha-ui-color;
+		}
+
+		
+	}
+
 	a:hover {
-		color: lighten($alpha-ui-color,10);
+		color: lighten($alpha-text-color,20);
 	}
 }
+
 
 .mobile-nav .main-nav {
 	display: none;
@@ -29,8 +39,8 @@
 
 .main-nav,
 .mobile-nav .main-nav {
-
-	margin-top: 0.8em;
+	font-size: 1.2em;
+	// margin-top: 0.8em;
 
 	ul {
 		padding-bottom: 0;
@@ -45,8 +55,8 @@
 	a {
 		display: block;
 		width: 100%;
-		@include padding-tb(0.4,0.4);
-		@include px-padding-lr(1,0);
+		@include padding-tb(0.6,0.6);
+		@include px-padding-lr(2,0);
 	}
 
 	.selected {
@@ -59,12 +69,6 @@
 	}
 
 
-	li:last-child {
-		a, a:hover, a:visited, a:active {
-			@include padding-tb(0.4,0);
-			//color: darken($alpha-ui-color,12);
-		}
-	}
 
 
 
@@ -74,7 +78,7 @@
 		display: block !important;
 		width: 100%;
 		float: left;
-		font-size: 1.05em;
+		font-size: 1.15em;
 		margin-top: 0;
 
 		ul {
@@ -91,11 +95,7 @@
 			margin-right: 2em;
 		}
 
-		ul li:last-child {
-    		float: right;
-    		margin-right: 0em !important;
-
-		}
+		
 
 		.main-nav-extra {
 			float: right;
@@ -105,9 +105,7 @@
 		}
 
 
-		li:last-child a {
-			@include padding-tb(0.4,0.4);
-		}
+		
 
 		a {
 			@include px-padding-lr(0,0);
@@ -124,6 +122,11 @@
 	}
 
 }
+
+
+
+
+
 
 //
 // sub navigation
@@ -179,18 +182,14 @@
 
 .main-nav-trigger {
 	cursor: pointer;
-	//dihttp://vrdfork:8888/nlsplay: block;
-	color: $beta-ui-color;
+	color: $alpha-text-color;
 	float: right;
-	//width: 2.1em;
-	//height: 2.1em;
-	//text-indent: -9999px;
-	//@include text-dimensions($alpha-font-size,1,1);
 	@include svg-bg("../img/icon-menu", ".png", 100%, no-repeat);
 	font-size: 1.2em;
 	font-weight: bold;
-	@include px-margin-lr(0,1);
+	@include px-margin-lr(0,2);
 	@include px-padding-lr(0,4.5);
+	@include margin-tb(0.4,0.4);
 
 	@include mq($bp3) {
 		display: none;
@@ -204,16 +203,29 @@
 
 
 
+
+
+
+
+
+
+
+//
 // language Navigation
+//
+
+
 
 .lan-nav {
 	position: absolute;
 	right: 0;
-	@include px-padding-lr(0,1);
+	margin-top: -0.5em;
+	@include px-padding-lr(0,2);
 
 	@include mq($bp3) {
 		@include px-padding-lr(0,0);
 		position: relative;
+		margin-top: 0.11em;
 	}
 
 	ul {

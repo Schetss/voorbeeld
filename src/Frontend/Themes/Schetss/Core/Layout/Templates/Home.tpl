@@ -8,66 +8,100 @@
 
 	<main id="main" class="holder main-holder" role="main">
 		<div class="main">
-			<div class="row">
-				<div class="triangle-top"></div>
-				<div class="quote">
-					<p class="quote-title">Creatief digitaal</p>
-					<p class="quote-p">Van idee tot werkend eindproduct binnen uw deadline.</p>
+			<div class="main-head">
+				<div class="main-head-overlay"></div>
+				<div class="main-head-image">
+					{* Image position *}
+					{option:positionImage}
+						{iteration:positionImage}
+						{option:!positionImage.blockIsHTML}
+							{$positionImage.blockContent}
+						{/option:!positionImage.blockIsHTML}
+						{option:positionImage.blockIsHTML}
+							{$positionImage.blockContent}
+						{/option:positionImage.blockIsHTML}
+						{/iteration:positionImage}
+					{/option:positionImage}
+				</div>
+				<div class="main-head-quote">
+					<div class="row">
+						{* Quote position *}
+						{option:positionQuote}
+							{iteration:positionQuote}
+							{option:!positionQuote.blockIsHTML}
+								{$positionQuote.blockContent}
+							{/option:!positionQuote.blockIsHTML}
+							{option:positionQuote.blockIsHTML}
+								{$positionQuote.blockContent}
+							{/option:positionQuote.blockIsHTML}
+							{/iteration:positionQuote}
+						{/option:positionQuote}
+					</div>
 				</div>
 			</div>
+			<div class="block1 row">
+				{* Block1 position *}
+				{option:positionBlock1}
+					{iteration:positionBlock1}
+					{option:!positionBlock1.blockIsHTML}
+						{$positionBlock1.blockContent}
+					{/option:!positionBlock1.blockIsHTML}
+					{option:positionBlock1.blockIsHTML}
+						{$positionBlock1.blockContent}
+					{/option:positionBlock1.blockIsHTML}
+					{/iteration:positionBlock1}
+				{/option:positionBlock1}
+			</div>
 
-				<div class="home-images">
-					<div class="image-overlay2"></div>
-					<div class="instagram">
-						<!-- www.intagme.com -->
-						<iframe src="http://www.intagme.com/in/?u=c2NoZXRzc3Rpam58aW58MzAwfDEwfDJ8ZjhmOGY4fG5vfDF8dW5kZWZpbmVkfG5v" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:3010px; height: 602px" ></iframe>
-					</div>
-					
-					
+			
+			<div class="clear"></div>
 
-					<div class="volg-btn">
-						<a href="http://instagram.com/schetss.be" target="_blank">Volg ons op Instagram</a>
-					</div>
-
-				</div>
-				<div class="row triangle-row">	
-					<div class="triangle-top2"></div>
-				</div>
-
+			<div class="greyBlock">
 				<div class="row">
-					<div class="quote2">
-						<p class="quote2-title">Logo of website</p>
-						<p class="quote2-p">Van klein grafisch werk tot een uitgebreide website.<br /> Of is het een idee, wij helpen u graag uw digitaal concept te realiseren. </p>
+					{* GreyBlock position *}
+					{option:positionGreyBlock}
+						{iteration:positionGreyBlock}
+						{option:!positionGreyBlock.blockIsHTML}
+							{$positionGreyBlock.blockContent}
+						{/option:!positionGreyBlock.blockIsHTML}
+						{option:positionGreyBlock.blockIsHTML}
+							{$positionGreyBlock.blockContent}
+						{/option:positionGreyBlock.blockIsHTML}
+						{/iteration:positionGreyBlock}
+					{/option:positionGreyBlock}
+				</div>
+			</div>
+			
+		<div class="block2">
+				<div class="block2Image">
+					{* Block2Image position *}
+					{option:positionBlock2Image}
+						{iteration:positionBlock2Image}
+						{option:!positionBlock2Image.blockIsHTML}
+							{$positionBlock2Image.blockContent}
+						{/option:!positionBlock2Image.blockIsHTML}
+						{option:positionBlock2Image.blockIsHTML}
+							{$positionBlock2Image.blockContent}
+						{/option:positionBlock2Image.blockIsHTML}
+						{/iteration:positionBlock2Image}
+					{/option:positionBlock2Image}
+				</div>
+				<div class="row">
+					<div class="block2Text">
+						{* Block2Text position *}
+						{option:positionBlock2Text}
+							{iteration:positionBlock2Text}
+							{option:!positionBlock2Text.blockIsHTML}
+								{$positionBlock2Text.blockContent}
+							{/option:!positionBlock2Text.blockIsHTML}
+							{option:positionBlock2Text.blockIsHTML}
+								{$positionBlock2Text.blockContent}
+							{/option:positionBlock2Text.blockIsHTML}
+							{/iteration:positionBlock2Text}
+						{/option:positionBlock2Text}
 					</div>
 				</div>
-
-
-
-				<div class="content">
-					{* Main position *}
-					{option:positionMain}
-						{iteration:positionMain}
-						{option:!positionMain.blockIsHTML}
-							{$positionMain.blockContent}
-						{/option:!positionMain.blockIsHTML}
-						{option:positionMain.blockIsHTML}
-							{$positionMain.blockContent}
-						{/option:positionMain.blockIsHTML}
-						{/iteration:positionMain}
-					{/option:positionMain}
-				</div>
-
-				{* Main2 position *}
-				{option:positionMain2}
-					{iteration:positionMain2}
-					{option:!positionMain2.blockIsHTML}
-						{$positionMain2.blockContent}
-					{/option:!positionMain2.blockIsHTML}
-					{option:positionMain2.blockIsHTML}
-						{$positionMain2.blockContent}
-					{/option:positionMain2.blockIsHTML}
-					{/iteration:positionMain2}
-				{/option:positionMain2}
+			</div>
 		
 		</div>
 	</main>

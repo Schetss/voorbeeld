@@ -22,13 +22,14 @@
 
 
 		<div class="navigation">
-			<div class="row">
+			<div id="nav-row" >
 				{* Navigation *}
 				<nav class="main-nav">
 					{$var|getnavigation:'page':0:1}
 				</nav>
 			</div>
 		</div>
+		<div class="clear"></div>
 
 	</div>
 </header>

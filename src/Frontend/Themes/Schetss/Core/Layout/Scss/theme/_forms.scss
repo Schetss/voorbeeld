@@ -49,12 +49,13 @@ textarea {
 	margin: 0;
 	width: 100%;
 	display: block;
+	border: 1px solid $alpha-text-color;
 	@include border-box;
 	@include input-s;
 
 	&:focus {
 		color: $alpha-text-color;
-		outline-color: $gamma-ui-color;
+		outline-color: $alpha-ui-color;
 		// border-color: darken($gamma-ui-color, 20);
 	}
 
@@ -102,14 +103,14 @@ input[type="submit"],
 button {
 
 	cursor: pointer;
-	background-color: $gamma-ui-color;
-	color: $alpha-ui-color;
+	background-color: $alpha-ui-color;
+	color: $beta-text-color;
 	border: none;
 	float: right;
 	border-radius: $radius;
 	width: 200px;
 	height: 40px;
-	margin-top: 20px;
+	margin-top: 35px;
 	font-size: 1.1em;
 	font-weight: 600;
 	-webkit-appearance: none;

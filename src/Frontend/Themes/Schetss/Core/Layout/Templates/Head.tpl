@@ -32,11 +32,8 @@
 	-->
 	<!-- Fonts -->
 
-	<script src="//use.typekit.net/khj8bjq.js"></script>
+	<script src="//use.typekit.net/mcb2tyw.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-
-
-
 
 	{* Windows 8 tile *}
 	<meta name="application-name" content="{$siteTitle}"/>

@@ -77,12 +77,12 @@ $highlight		: 0%; // Range: 0-100%
 
 // Colors
 
-$alpha-text-color	: #3A3931; // Dark grey
+$alpha-text-color	: #303030; // Dark grey
 $beta-text-color	: #f8f8f8; // White
 
-$alpha-ui-color		: #376EB6; // Dark blue
+$alpha-ui-color		: #1C62D1; // Blue
 $beta-ui-color		: #4DA4DB; // Light blue
-$gamma-ui-color		: #FFCD14; // Yellow
+$gamma-ui-color		: #808080; // light grey
 $delta-ui-color		: $beta-text-color;
 $epsilon-ui-color	: #59584E; // Grey
 
@@ -96,7 +96,7 @@ $notice-color 		: #ffe38a;
 
 // Links
 
-$alpha-link-color			: $gamma-ui-color;
+$alpha-link-color			: $alpha-ui-color;
 $alpha-link-colorhover		: darken($alpha-link-color, 10);
 $alpha-link-colorfocus		: darken($alpha-link-color, 10);
 $alpha-link-coloractive		: lighten($alpha-link-color, 10);
